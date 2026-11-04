@@ -30,10 +30,10 @@ export function DegradationChart({ data }: { data: CategoryDegradation[] }) {
       <CardHeader>
         <CardTitle id={titleId}>Degradation By Category</CardTitle>
       </CardHeader>
-      <CardContent className="flex-1 pt-6">
+      <CardContent className="flex-1 pt-5">
         <figure aria-labelledby={titleId} className="flex h-full flex-col">
-          <div className="flex min-h-64 flex-1 gap-3" aria-hidden>
-            <div className="relative w-9 shrink-0 text-[0.6875rem] text-muted-foreground">
+          <div className="flex min-h-60 flex-1 gap-3" aria-hidden>
+            <div className="relative w-9 shrink-0 text-caption text-muted-foreground">
               {TICKS.map((tick) => (
                 <span
                   key={tick}
@@ -48,7 +48,7 @@ export function DegradationChart({ data }: { data: CategoryDegradation[] }) {
               {TICKS.map((tick) => (
                 <div
                   key={tick}
-                  className="absolute inset-x-0 border-t border-dotted border-border-strong"
+                  className="absolute inset-x-0 border-t border-dotted border-muted-foreground/35"
                   style={{ top: `${100 - tick}%` }}
                 />
               ))}
@@ -75,29 +75,32 @@ export function DegradationChart({ data }: { data: CategoryDegradation[] }) {
           </div>
           <div className="mt-2 flex gap-3" aria-hidden>
             <div className="w-9 shrink-0" />
-            <div className="grid flex-1 grid-cols-4 gap-4 px-2 text-center text-[0.6875rem] leading-tight text-muted-foreground sm:gap-8 sm:px-6">
+            <div className="grid flex-1 grid-cols-4 gap-1 text-center text-[0.625rem] leading-tight hyphens-auto text-muted-foreground sm:gap-8 sm:px-6 sm:text-caption">
               {data.map((item) => (
                 <span key={item.categoryId}>{CATEGORY_LABELS[item.categoryId]}</span>
               ))}
             </div>
           </div>
-          <table className="sr-only">
-            <caption>Confidence degradation per assessment category</caption>
-            <thead>
-              <tr>
-                <th scope="col">Category</th>
-                <th scope="col">Degradation</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((item) => (
-                <tr key={item.categoryId}>
-                  <th scope="row">{CATEGORY_LABELS[item.categoryId]}</th>
-                  <td>{formatPercent(item.degradationPercent)}</td>
+          {/* A table element ignores the 1px sr-only width, so the wrapper is the one clipped. */}
+          <div className="sr-only">
+            <table>
+              <caption>Confidence degradation per assessment category</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Degradation</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {data.map((item) => (
+                  <tr key={item.categoryId}>
+                    <th scope="row">{CATEGORY_LABELS[item.categoryId]}</th>
+                    <td>{formatPercent(item.degradationPercent)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </figure>
       </CardContent>
     </Card>

@@ -5,7 +5,7 @@ export function FindingsList({ findings, className }: { findings: Finding[]; cla
   return (
     <ol className={cn('flex flex-col gap-4', className)}>
       {findings.map((finding, index) => (
-        <li key={finding.id} className="flex items-start gap-3 text-sm">
+        <li key={finding.id} className="flex items-start gap-3 text-label">
           <span
             className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-xs font-semibold text-brand-500"
             aria-hidden
