@@ -31,7 +31,7 @@ export function UnavailableItem({ label, icon: Icon }: { label: string; icon: Lu
 
 export function NavItems({ className }: { className?: string }) {
   return (
-    <ul className={cn('flex gap-3', className)}>
+    <ul className={cn('flex gap-2 sm:gap-3', className)}>
       <li>
         <RailTooltip label="Assessments">
           <NavLink
