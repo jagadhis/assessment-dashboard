@@ -24,8 +24,8 @@ export function AssessedInputsGrid({ inputs, selectedId, onSelect }: AssessedInp
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-lg">Assessed Inputs</h2>
-          <p className="text-xs text-muted-foreground">
+          <h2 className="text-card-title">Assessed Inputs</h2>
+          <p className="text-card-subtitle text-muted-foreground">
             Select an assessed input to view its result.
           </p>
         </div>
@@ -52,7 +52,7 @@ export function AssessedInputsGrid({ inputs, selectedId, onSelect }: AssessedInp
         </div>
       </div>
 
-      <ul aria-label="Assessed inputs" className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <ul aria-label="Assessed inputs" className="grid grid-cols-2 gap-section lg:grid-cols-4">
         {visible.map((input) => {
           const selected = input.id === selectedId;
           return (

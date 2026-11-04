@@ -17,7 +17,7 @@ import { confidenceChangePp, formatConfidence } from '@/lib/format';
 function InputPanel({ caption, image }: { caption: string; image: ImageAsset }) {
   return (
     <figure className="flex flex-col gap-2 rounded-xl bg-panel p-2.5">
-      <figcaption className="px-1 text-xs">{caption}</figcaption>
+      <figcaption className="px-1 text-card-subtitle">{caption}</figcaption>
       <img
         src={image.src}
         width={image.width}
@@ -50,7 +50,7 @@ export function SelectedInputDetails({ reference, input }: SelectedInputDetailsP
           Comparison of the reference input and selected assessed input
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid items-center gap-6 pt-5 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_minmax(15rem,0.8fr)]">
+      <CardContent className="grid items-center gap-x-6 gap-y-section pt-5 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_minmax(15rem,0.8fr)]">
         {swapped ? inputPanel : referencePanel}
         <button
           type="button"
@@ -65,36 +65,40 @@ export function SelectedInputDetails({ reference, input }: SelectedInputDetailsP
         </button>
         {swapped ? referencePanel : inputPanel}
 
-        <Table className="lg:col-span-3 xl:col-span-1">
-          <TableHeader>
-            <TableRow>
-              <TableHead>Measure</TableHead>
-              <TableHead>Confidence Score</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableCell className="text-xs text-muted-foreground">Reference Input</TableCell>
-              <TableCell className="font-semibold">
-                {formatConfidence(reference.confidence)}
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="text-xs text-muted-foreground">
-                Assessed Input ({input.label})
-              </TableCell>
-              <TableCell className="font-semibold">{formatConfidence(input.confidence)}</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="text-xs text-muted-foreground">Measured Change</TableCell>
-              <TableCell className="font-semibold">
-                <ChangeIndicator
-                  changePp={confidenceChangePp(reference.confidence, input.confidence)}
-                />
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+        <div className="self-start md:col-span-3 xl:col-span-1">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Measure</TableHead>
+                <TableHead>Confidence Score</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="text-xs text-muted-foreground">Reference Input</TableCell>
+                <TableCell className="font-semibold">
+                  {formatConfidence(reference.confidence)}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-xs text-muted-foreground">
+                  Assessed Input ({input.label})
+                </TableCell>
+                <TableCell className="font-semibold">
+                  {formatConfidence(input.confidence)}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-xs text-muted-foreground">Measured Change</TableCell>
+                <TableCell className="font-semibold">
+                  <ChangeIndicator
+                    changePp={confidenceChangePp(reference.confidence, input.confidence)}
+                  />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
       </CardContent>
     </Card>
   );
