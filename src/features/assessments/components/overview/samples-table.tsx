@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router';
 
-import type { SampleSummary } from '@/api';
+import type { SampleSummary } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Table,
@@ -13,8 +13,8 @@ import {
 } from '@/components/ui/table';
 import { changeDirection, formatConfidence } from '@/lib/format';
 
-import { CATEGORY_LABELS } from '../../lib/categories';
-import { ChangeIndicator } from '../shared/change-indicator';
+import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
+import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
 import { SampleThumbnail } from './sample-thumbnail';
 import { paths } from '@/config/paths';
 

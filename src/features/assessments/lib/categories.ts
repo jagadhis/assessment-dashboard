@@ -1,4 +1,4 @@
-import type { CategoryId } from '@/api';
+import type { CategoryId } from '@/features/assessments/types/schemas';
 
 export const CATEGORY_LABELS: Record<CategoryId, string> = {
   'adversarial-manipulation': 'Adversarial Manipulation',

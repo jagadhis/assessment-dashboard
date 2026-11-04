@@ -1,4 +1,4 @@
-import type { ImageAsset } from '@/api';
+import type { ImageAsset } from '@/features/assessments/types/schemas';
 
 /** The faded copies behind the photo hint that each sample has several assessed variants. */
 export function SampleThumbnail({ image }: { image: ImageAsset }) {

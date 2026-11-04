@@ -1,4 +1,4 @@
-import type { Assessment } from '@/api';
+import type { Assessment } from '@/features/assessments/types/schemas';
 
 import { MetricCard } from './metric-card';
 import { OverallScoreCard } from './overall-score-card';

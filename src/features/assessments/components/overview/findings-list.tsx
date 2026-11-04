@@ -1,4 +1,4 @@
-import type { Finding } from '@/api';
+import type { Finding } from '@/features/assessments/types/schemas';
 import { cn } from '@/lib/utils';
 
 export function FindingsList({ findings, className }: { findings: Finding[]; className?: string }) {

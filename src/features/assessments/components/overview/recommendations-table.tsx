@@ -1,4 +1,4 @@
-import type { Recommendation } from '@/api';
+import type { Recommendation } from '@/features/assessments/types/schemas';
 import {
   Table,
   TableBody,

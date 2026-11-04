@@ -1,18 +1,19 @@
 import { useParams } from 'react-router';
 
-import type { Sample } from '@/api';
+import type { Sample } from '@/features/assessments/types/schemas';
 import { PageSkeleton } from '@/components/feedback/page-skeleton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-import { AssessedInputsGrid } from '../components/sample/assessed-inputs-grid';
-import { CategoryResultCards } from '../components/sample/category-result-cards';
-import { SampleHeaderCard } from '../components/sample/sample-header-card';
-import { SelectedInputDetails } from '../components/sample/selected-input-details';
-import { AssessmentPageHeader } from '../components/shared/assessment-page-header';
-import { InfoTooltip } from '../components/shared/info-tooltip';
-import { QueryError } from '../components/shared/query-error';
-import { useAssessment, useSample } from '../hooks/use-assessment';
-import { useSampleSelection } from '../hooks/use-sample-selection';
+import { AssessedInputsGrid } from '@/features/assessments/components/sample/assessed-inputs-grid';
+import { CategoryResultCards } from '@/features/assessments/components/sample/category-result-cards';
+import { SampleHeaderCard } from '@/features/assessments/components/sample/sample-header-card';
+import { SelectedInputDetails } from '@/features/assessments/components/sample/selected-input-details';
+import { AssessmentPageHeader } from '@/features/assessments/components/shared/assessment-page-header';
+import { InfoTooltip } from '@/features/assessments/components/shared/info-tooltip';
+import { QueryError } from '@/features/assessments/components/shared/query-error';
+import { useAssessment } from '@/features/assessments/api/get-assessment';
+import { useSample } from '@/features/assessments/api/get-sample';
+import { useSampleSelection } from '@/features/assessments/hooks/use-sample-selection';
 
 const CATEGORY_HELP =
   'Each category groups inputs produced by one family of changes. Select a category to see its inputs.';

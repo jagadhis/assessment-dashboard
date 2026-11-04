@@ -1,11 +1,11 @@
 import { useId } from 'react';
 
-import type { CategoryDegradation } from '@/api';
+import type { CategoryDegradation } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatPercent } from '@/lib/format';
 import { cn } from '@/lib/utils';
 
-import { CATEGORY_LABELS } from '../../lib/categories';
+import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
 
 const TICKS = [100, 80, 60, 40, 20, 0];
 

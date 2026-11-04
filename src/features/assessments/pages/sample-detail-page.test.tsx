@@ -1,6 +1,6 @@
 import { screen, within } from '@testing-library/react';
 
-import { renderRoute } from '@/test/render-route';
+import { renderRoute } from '@/testing/test-utils';
 
 const inputLabels = () =>
   within(screen.getByRole('list', { name: 'Assessed inputs' }))

@@ -1,9 +1,9 @@
-import type { CategoryId, CategoryResult } from '@/api';
+import type { CategoryId, CategoryResult } from '@/features/assessments/types/schemas';
 import { formatConfidence } from '@/lib/format';
 import { cn } from '@/lib/utils';
 
-import { CATEGORY_LABELS } from '../../lib/categories';
-import { ChangeIndicator } from '../shared/change-indicator';
+import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
+import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
 
 interface CategoryResultCardsProps {
   results: CategoryResult[];

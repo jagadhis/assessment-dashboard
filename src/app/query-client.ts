@@ -1,6 +1,6 @@
 import { QueryClient } from '@tanstack/react-query';
 
-import { isNotFound } from '@/api/errors';
+import { isNotFound } from '@/lib/api-client';
 
 export function createQueryClient() {
   return new QueryClient({
