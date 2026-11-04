@@ -26,7 +26,7 @@ function TableHead({ className, ...props }: ComponentProps<'th'>) {
   return (
     <th
       className={cn(
-        'h-11 px-3 text-left align-middle text-xs font-semibold whitespace-nowrap text-muted-foreground',
+        'h-11 px-3 text-left align-middle font-serif text-label font-semibold whitespace-nowrap text-muted-foreground',
         className,
       )}
       {...props}

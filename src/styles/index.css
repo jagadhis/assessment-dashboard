@@ -46,6 +46,27 @@
   --color-priority-low: #bbf7c9;
   --color-priority-low-foreground: #15803d;
 
+  /* Type roles. Each one sets size and line height; headings get the serif face from the base layer. */
+  --text-page-title: 1.625rem;
+  --text-page-title--line-height: 2rem;
+  --text-card-title: 1.125rem;
+  --text-card-title--line-height: 1.5rem;
+  --text-card-subtitle: 0.75rem;
+  --text-card-subtitle--line-height: 1rem;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.25rem;
+  --text-caption: 0.6875rem;
+  --text-caption--line-height: 0.875rem;
+  --text-stat: 1.75rem;
+  --text-stat--line-height: 2.25rem;
+  --text-kpi: 2rem;
+  --text-kpi--line-height: 2.5rem;
+
+  /* Spacing roles: the page gutter, the gap between sections and cards, and card padding. */
+  --spacing-gutter: 1.5rem;
+  --spacing-section: 1.25rem;
+  --spacing-card: 1.25rem;
+
   --radius-control: 0.75rem;
   --radius-card: 1.25rem;
   --radius-pill: 9999px;
