@@ -16,6 +16,7 @@ import { changeDirection, formatConfidence } from '@/lib/format';
 import { CATEGORY_LABELS } from '../../lib/categories';
 import { ChangeIndicator } from '../shared/change-indicator';
 import { SampleThumbnail } from './sample-thumbnail';
+import { paths } from '@/config/paths';
 
 interface SamplesTableProps {
   assessmentId: string;
@@ -71,7 +72,7 @@ export function SamplesTable({ assessmentId, samples }: SamplesTableProps) {
                 <TableCell>{CATEGORY_LABELS[sample.categoryId]}</TableCell>
                 <TableCell>
                   <Link
-                    to={`/assessments/${assessmentId}/samples/${sample.id}`}
+                    to={paths.sample.getHref(assessmentId, sample.id)}
                     className="flex justify-end text-muted-foreground after:absolute after:inset-0 hover:text-foreground focus-visible:outline-none"
                   >
                     <ChevronRight className="size-5" aria-hidden />

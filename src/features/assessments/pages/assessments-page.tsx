@@ -15,6 +15,7 @@ import {
 
 import { QueryError } from '../components/shared/query-error';
 import { useAssessments } from '../hooks/use-assessment';
+import { paths } from '@/config/paths';
 
 export function AssessmentsPage() {
   const { data: assessments, error, refetch } = useAssessments();
@@ -27,7 +28,7 @@ export function AssessmentsPage() {
   return (
     <>
       <PageHeader
-        breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Assessments' }]}
+        breadcrumbs={[{ label: 'Home', to: paths.home.getHref() }, { label: 'Assessments' }]}
         title="Assessments"
       />
       <Card>
@@ -58,7 +59,7 @@ export function AssessmentsPage() {
                   </TableCell>
                   <TableCell>
                     <Link
-                      to={`/assessments/${assessment.id}`}
+                      to={paths.assessment.getHref(assessment.id)}
                       className="flex justify-end text-muted-foreground after:absolute after:inset-0 hover:text-foreground focus-visible:outline-none"
                     >
                       <ChevronRight className="size-5" aria-hidden />
