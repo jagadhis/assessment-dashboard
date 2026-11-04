@@ -24,9 +24,9 @@ export function AssessmentRoute() {
   return (
     <>
       <AssessmentPageHeader assessment={assessment} />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-section">
         <KpiRow assessment={assessment} />
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+        <div className="grid gap-section lg:grid-cols-[minmax(0,61fr)_minmax(0,39fr)]">
           <DegradationChart data={assessment.degradationByCategory} />
           <FindingsCard assessment={assessment} openTo={findingsDialog.openTo} />
         </div>

@@ -25,11 +25,11 @@ export function FindingsCard({ assessment, openTo }: FindingsCardProps) {
         </Link>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-6 pt-4">
-        <p className="text-sm leading-relaxed">{assessment.summary}</p>
+        <p className="text-label leading-relaxed">{assessment.summary}</p>
         <FindingsList findings={assessment.findings} />
         <Link
           to={openTo}
-          className="group mt-auto flex items-center gap-3 rounded-sm text-sm text-brand-500"
+          className="group mt-auto flex items-center gap-3 rounded-sm text-label text-brand-500"
         >
           <span
             className="flex size-6 items-center justify-center rounded-full bg-brand-50 text-xs font-semibold"

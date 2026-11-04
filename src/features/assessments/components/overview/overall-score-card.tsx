@@ -5,18 +5,28 @@ import { cn } from '@/lib/utils';
 const SCORE_HELP =
   'Composite risk score from 0 to 100, based on how often assessed inputs changed the model output. Lower means a more robust model.';
 
-export function OverallScoreCard({ score }: { score: OverallScore | null }) {
+interface OverallScoreCardProps {
+  score: OverallScore | null;
+  className?: string;
+}
+
+export function OverallScoreCard({ score, className }: OverallScoreCardProps) {
   return (
-    <div className="flex min-h-36 flex-col gap-2 rounded-card bg-linear-to-br from-brand-800 to-brand-600 p-5 text-white shadow-score">
+    <div
+      className={cn(
+        'flex min-h-38 flex-col rounded-card bg-linear-to-br from-brand-800 to-brand-600 p-card text-white shadow-score',
+        className,
+      )}
+    >
       <div className="flex items-start justify-between gap-3">
-        <h2 className="font-serif text-lg font-semibold">Overall Score</h2>
+        <h2 className="text-card-title font-semibold">Overall Score</h2>
         <InfoTooltip
           label="Overall Score"
           content={SCORE_HELP}
-          className="bg-white/20 text-white hover:text-white"
+          className="rounded-full bg-white/20 text-white hover:text-white"
         />
       </div>
-      <p className={cn('font-serif font-semibold', score ? 'text-4xl' : 'text-4xl tracking-wide')}>
+      <p className="mt-2 font-serif text-kpi font-semibold">
         {score ? (
           <>
             {score.value}
@@ -29,7 +39,7 @@ export function OverallScoreCard({ score }: { score: OverallScore | null }) {
           </>
         )}
       </p>
-      <p className="text-xs leading-snug text-white/90">
+      <p className="mt-auto pt-3 text-card-subtitle text-white/90">
         {score ? score.summary : 'Not applicable for this model output.'}
       </p>
     </div>
