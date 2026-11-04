@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import type { Assessment } from '@/api';
+import type { Assessment } from '@/features/assessments/types/schemas';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 
 import { FindingsList } from './findings-list';

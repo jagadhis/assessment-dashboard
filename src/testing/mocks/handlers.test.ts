@@ -1,11 +1,9 @@
-import { isNotFound } from '../errors';
-import { createMockApi } from './mock-api';
+import { getSample } from '@/features/assessments/api/get-sample';
+import { isNotFound } from '@/lib/api-client';
 
-const api = createMockApi({ delayMs: 0 });
-
-describe('mock api', () => {
+describe('mock handlers', () => {
   it('aggregates each category from its assessed inputs', async () => {
-    const sample = await api.getSample('product-name', 's1');
+    const sample = await getSample('product-name', 's1');
 
     expect(sample.inputs).toHaveLength(17);
     expect(
@@ -44,7 +42,7 @@ describe('mock api', () => {
   });
 
   it('rejects unknown ids with a not-found error', async () => {
-    const error: unknown = await api.getSample('product-name', 'missing').catch((e: unknown) => e);
+    const error: unknown = await getSample('product-name', 'missing').catch((e: unknown) => e);
     expect(isNotFound(error)).toBe(true);
   });
 });

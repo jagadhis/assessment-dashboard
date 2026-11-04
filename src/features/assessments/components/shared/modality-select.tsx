@@ -1,4 +1,4 @@
-import type { Modality } from '@/api';
+import type { Modality } from '@/features/assessments/types/schemas';
 import {
   Select,
   SelectContent,

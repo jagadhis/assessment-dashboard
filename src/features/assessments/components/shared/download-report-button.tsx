@@ -2,7 +2,7 @@ import { Download, LoaderCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 
-import { useDownloadReport } from '../../hooks/use-download-report';
+import { useDownloadReport } from '@/features/assessments/api/download-report';
 
 export function DownloadReportButton({ assessmentId }: { assessmentId: string }) {
   const download = useDownloadReport(assessmentId);

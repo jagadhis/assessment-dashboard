@@ -1,7 +1,7 @@
-import type { OverallScore } from '@/api';
+import type { OverallScore } from '@/features/assessments/types/schemas';
 import { cn } from '@/lib/utils';
 
-import { InfoTooltip } from '../shared/info-tooltip';
+import { InfoTooltip } from '@/features/assessments/components/shared/info-tooltip';
 
 const SCORE_HELP =
   'Composite risk score from 0 to 100, based on how often assessed inputs changed the model output. Lower means a more robust model.';

@@ -13,8 +13,8 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
-import { QueryError } from '../components/shared/query-error';
-import { useAssessments } from '../hooks/use-assessment';
+import { QueryError } from '@/features/assessments/components/shared/query-error';
+import { useAssessments } from '@/features/assessments/api/get-assessments';
 import { paths } from '@/config/paths';
 
 export function AssessmentsPage() {

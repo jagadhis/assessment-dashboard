@@ -1,4 +1,4 @@
-import type { Assessment } from '@/api';
+import type { Assessment } from '@/features/assessments/types/schemas';
 import type { Crumb } from '@/components/layout/breadcrumbs';
 import { PageHeader } from '@/components/layout/page-header';
 

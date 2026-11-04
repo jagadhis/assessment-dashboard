@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router';
 
-import type { CategoryId, Sample } from '@/api';
+import type { CategoryId, Sample } from '@/features/assessments/types/schemas';
 
 /**
  * Category and input selection live in the URL so a specific comparison can be shared.

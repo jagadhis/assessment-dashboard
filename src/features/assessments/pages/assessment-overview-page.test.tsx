@@ -1,6 +1,6 @@
 import { screen, within } from '@testing-library/react';
 
-import { renderRoute } from '@/test/render-route';
+import { renderRoute } from '@/testing/test-utils';
 
 describe('AssessmentOverviewPage', () => {
   it('shows the overall score when the assessment has one', async () => {

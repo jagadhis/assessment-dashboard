@@ -1,8 +1,8 @@
-import type { Metric } from '@/api';
+import type { Metric } from '@/features/assessments/types/schemas';
 import { Card } from '@/components/ui/card';
 import { formatPercent } from '@/lib/format';
 
-import { InfoTooltip } from '../shared/info-tooltip';
+import { InfoTooltip } from '@/features/assessments/components/shared/info-tooltip';
 
 export function MetricCard({ metric }: { metric: Metric }) {
   const title = `${metric.name} (${metric.abbreviation})`;

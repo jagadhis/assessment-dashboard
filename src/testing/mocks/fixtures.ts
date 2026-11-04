@@ -1,4 +1,10 @@
-import type { Assessment, AssessedInput, CategoryId, ImageAsset, Sample } from '../schemas';
+import type {
+  Assessment,
+  AssessedInput,
+  CategoryId,
+  ImageAsset,
+  Sample,
+} from '@/features/assessments/types/schemas';
 
 type Photo = 'dog' | 'car';
 
