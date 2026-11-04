@@ -31,7 +31,7 @@ export function SampleRoute() {
   return (
     <>
       <AssessmentPageHeader assessment={assessment.data} trailingCrumb={sample.data.label} />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-section">
         <SampleHeaderCard sample={sample.data} />
         <SampleResults sample={sample.data} />
       </div>

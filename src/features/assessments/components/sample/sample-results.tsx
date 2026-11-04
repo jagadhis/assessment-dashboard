@@ -26,13 +26,13 @@ export function SampleResults({ sample }: { sample: Sample }) {
             Summary of results for this sample across different assessment categories
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-8 pt-5">
+        <CardContent className="flex flex-col gap-7 pt-5">
           <CategoryResultCards
             results={sample.categoryResults}
             selectedId={selection.category?.categoryId}
             onSelect={selection.selectCategory}
           />
-          <hr className="mx-auto w-1/3 border-border" />
+          <hr className="mx-auto w-1/3 border-border-strong" />
           <AssessedInputsGrid
             key={selection.category?.categoryId}
             inputs={selection.inputs}
