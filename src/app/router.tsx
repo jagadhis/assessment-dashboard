@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate, type RouteObject } from 'react-router';
 
+import { PageSkeleton } from '@/components/feedback/page-skeleton';
 import { AppShell } from '@/components/layouts/app-shell';
 import { paths } from '@/config/paths';
 
@@ -7,6 +8,12 @@ import { paths } from '@/config/paths';
 export const routes: RouteObject[] = [
   {
     element: <AppShell />,
+    // Shown while the first route module loads.
+    HydrateFallback: () => (
+      <AppShell>
+        <PageSkeleton />
+      </AppShell>
+    ),
     children: [
       { index: true, element: <Navigate to={paths.assessments.getHref()} replace /> },
       {
