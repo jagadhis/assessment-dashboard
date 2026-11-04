@@ -1,8 +1,8 @@
 import { ArrowRight, CircleCheck } from 'lucide-react';
 import { useState } from 'react';
 
-import type { AssessedInput } from '@/features/assessments/types/schemas';
 import { Button } from '@/components/ui/button';
+import type { AssessedInput } from '@/features/assessments/types/schemas';
 import { cn } from '@/lib/utils';
 
 const COLLAPSED_COUNT = 4;

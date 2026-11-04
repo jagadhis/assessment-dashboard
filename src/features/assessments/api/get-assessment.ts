@@ -1,8 +1,8 @@
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
+import { assessmentSchema, type Assessment } from '@/features/assessments/types/schemas';
 import { api } from '@/lib/api-client';
 
-import { assessmentSchema, type Assessment } from '@/features/assessments/types/schemas';
 import { assessmentKeys, assessmentPath } from './query-keys';
 
 export function getAssessment(assessmentId: string): Promise<Assessment> {
