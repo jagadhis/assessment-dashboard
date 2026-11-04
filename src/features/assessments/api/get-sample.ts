@@ -1,8 +1,8 @@
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
+import { sampleSchema, type Sample } from '@/features/assessments/types/schemas';
 import { api } from '@/lib/api-client';
 
-import { sampleSchema, type Sample } from '@/features/assessments/types/schemas';
 import { assessmentKeys, assessmentPath } from './query-keys';
 
 export function getSample(assessmentId: string, sampleId: string): Promise<Sample> {

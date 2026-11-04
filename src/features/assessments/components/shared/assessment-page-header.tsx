@@ -1,10 +1,10 @@
-import type { Assessment } from '@/features/assessments/types/schemas';
 import type { Crumb } from '@/components/layouts/breadcrumbs';
 import { PageHeader } from '@/components/layouts/page-header';
+import { paths } from '@/config/paths';
+import type { Assessment } from '@/features/assessments/types/schemas';
 
 import { DownloadReportButton } from './download-report-button';
 import { ModalitySelect } from './modality-select';
-import { paths } from '@/config/paths';
 
 interface AssessmentPageHeaderProps {
   assessment: Pick<Assessment, 'id' | 'productName' | 'modality'>;

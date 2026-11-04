@@ -1,4 +1,3 @@
-import type { Recommendation } from '@/features/assessments/types/schemas';
 import {
   Table,
   TableBody,
@@ -7,6 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import type { Recommendation } from '@/features/assessments/types/schemas';
 
 import { PriorityBadge } from './priority-badge';
 

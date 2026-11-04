@@ -1,7 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router';
 
-import type { SampleSummary } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Table,
@@ -11,12 +10,13 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { paths } from '@/config/paths';
+import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
+import type { SampleSummary } from '@/features/assessments/types/schemas';
+import { CATEGORY_LABELS } from '@/features/assessments/utils/categories';
 import { changeDirection, formatConfidence } from '@/lib/format';
 
-import { CATEGORY_LABELS } from '@/features/assessments/utils/categories';
-import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
 import { SampleThumbnail } from './sample-thumbnail';
-import { paths } from '@/config/paths';
 
 interface SamplesTableProps {
   assessmentId: string;

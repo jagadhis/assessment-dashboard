@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
 
-import { isNotFound } from '@/lib/api-client';
 import { ErrorState } from '@/components/feedback/error-state';
 import { Button } from '@/components/ui/button';
 import { paths } from '@/config/paths';
+import { isNotFound } from '@/lib/api-client';
 
 interface QueryErrorProps {
   error: Error;

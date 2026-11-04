@@ -1,10 +1,9 @@
 import type { ReactNode } from 'react';
 
-import type { Sample } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { formatConfidence } from '@/lib/format';
-
 import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
+import type { Sample } from '@/features/assessments/types/schemas';
+import { formatConfidence } from '@/lib/format';
 
 function Stat({ label, value, hint }: { label: string; value: ReactNode; hint: string }) {
   return (

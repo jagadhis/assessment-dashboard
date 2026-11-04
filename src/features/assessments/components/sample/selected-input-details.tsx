@@ -1,7 +1,6 @@
 import { ArrowRightLeft } from 'lucide-react';
 import { useState } from 'react';
 
-import type { AssessedInput, ImageAsset } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Table,
@@ -11,9 +10,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { confidenceChangePp, formatConfidence } from '@/lib/format';
-
 import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
+import type { AssessedInput, ImageAsset } from '@/features/assessments/types/schemas';
+import { confidenceChangePp, formatConfidence } from '@/lib/format';
 
 function InputPanel({ caption, image }: { caption: string; image: ImageAsset }) {
   return (

@@ -1,4 +1,3 @@
-import type { Modality } from '@/features/assessments/types/schemas';
 import {
   Select,
   SelectContent,
@@ -6,6 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import type { Modality } from '@/features/assessments/types/schemas';
 
 const MODALITY_LABELS: Record<Modality, string> = {
   image: 'Image',

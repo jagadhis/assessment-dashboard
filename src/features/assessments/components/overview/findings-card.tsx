@@ -1,8 +1,8 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Link, type To } from 'react-router';
 
-import type { Assessment } from '@/features/assessments/types/schemas';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Assessment } from '@/features/assessments/types/schemas';
 
 import { FindingsList } from './findings-list';
 

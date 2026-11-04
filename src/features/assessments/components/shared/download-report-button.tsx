@@ -1,7 +1,6 @@
 import { Download, LoaderCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-
 import { useDownloadReport } from '@/features/assessments/api/download-report';
 
 export function DownloadReportButton({ assessmentId }: { assessmentId: string }) {

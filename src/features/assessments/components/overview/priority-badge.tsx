@@ -1,5 +1,5 @@
-import type { Priority } from '@/features/assessments/types/schemas';
 import { Badge } from '@/components/ui/badge';
+import type { Priority } from '@/features/assessments/types/schemas';
 
 const LABELS: Record<Priority, string> = { high: 'High', medium: 'Medium', low: 'Low' };
 

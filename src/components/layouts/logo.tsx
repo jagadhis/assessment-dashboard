@@ -1,5 +1,6 @@
 import { Box } from 'lucide-react';
 import { Link } from 'react-router';
+
 import { paths } from '@/config/paths';
 
 export function Logo() {

@@ -3,8 +3,8 @@ import type { ReactNode } from 'react';
 import { NavLink } from 'react-router';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
 import { paths } from '@/config/paths';
+import { cn } from '@/lib/utils';
 
 const itemClass =
   'text-muted-foreground hover:bg-muted hover:text-foreground flex size-10 items-center justify-center rounded-xl transition-colors [&_svg]:size-5';

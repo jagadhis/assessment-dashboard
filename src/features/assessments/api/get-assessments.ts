@@ -1,11 +1,11 @@
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
-import { api } from '@/lib/api-client';
-
 import {
   assessmentListItemSchema,
   type AssessmentListItem,
 } from '@/features/assessments/types/schemas';
+import { api } from '@/lib/api-client';
+
 import { assessmentKeys } from './query-keys';
 
 export function getAssessments(): Promise<AssessmentListItem[]> {
