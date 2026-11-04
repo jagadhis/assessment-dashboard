@@ -2,7 +2,7 @@ import { screen, within } from '@testing-library/react';
 
 import { renderRoute } from '@/testing/test-utils';
 
-describe('AssessmentOverviewPage', () => {
+describe('AssessmentRoute', () => {
   it('shows the overall score when the assessment has one', async () => {
     renderRoute('/assessments/product-name');
 

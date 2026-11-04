@@ -4,7 +4,7 @@ import { ErrorState } from '@/components/feedback/error-state';
 import { Button } from '@/components/ui/button';
 import { paths } from '@/config/paths';
 
-export function NotFoundPage() {
+export function NotFoundRoute() {
   return (
     <ErrorState
       title="Page not found"

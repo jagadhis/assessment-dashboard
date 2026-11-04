@@ -2,7 +2,7 @@ import type { CategoryId, CategoryResult } from '@/features/assessments/types/sc
 import { formatConfidence } from '@/lib/format';
 import { cn } from '@/lib/utils';
 
-import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
+import { CATEGORY_LABELS } from '@/features/assessments/utils/categories';
 import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
 
 interface CategoryResultCardsProps {

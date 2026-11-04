@@ -1,24 +1,37 @@
 import { createBrowserRouter, Navigate, type RouteObject } from 'react-router';
 
-import { AppShell } from '@/components/layout/app-shell';
-
-import {
-  AssessmentOverviewPage,
-  AssessmentsPage,
-  NotFoundPage,
-  SampleDetailPage,
-} from './lazy-pages';
+import { AppShell } from '@/components/layouts/app-shell';
 import { paths } from '@/config/paths';
 
+/** Each route module is its own chunk, loaded by the router on first navigation to it. */
 export const routes: RouteObject[] = [
   {
     element: <AppShell />,
     children: [
       { index: true, element: <Navigate to={paths.assessments.getHref()} replace /> },
-      { path: paths.assessments.path, element: <AssessmentsPage /> },
-      { path: paths.assessment.path, element: <AssessmentOverviewPage /> },
-      { path: paths.sample.path, element: <SampleDetailPage /> },
-      { path: '*', element: <NotFoundPage /> },
+      {
+        path: paths.assessments.path,
+        lazy: () =>
+          import('./routes/assessments/assessments').then((m) => ({
+            Component: m.AssessmentsRoute,
+          })),
+      },
+      {
+        path: paths.assessment.path,
+        lazy: () =>
+          import('./routes/assessments/assessment').then((m) => ({
+            Component: m.AssessmentRoute,
+          })),
+      },
+      {
+        path: paths.sample.path,
+        lazy: () =>
+          import('./routes/assessments/sample').then((m) => ({ Component: m.SampleRoute })),
+      },
+      {
+        path: '*',
+        lazy: () => import('./routes/not-found').then((m) => ({ Component: m.NotFoundRoute })),
+      },
     ],
   },
 ];
