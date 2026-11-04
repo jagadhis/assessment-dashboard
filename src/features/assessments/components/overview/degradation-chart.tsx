@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatPercent } from '@/lib/format';
 import { cn } from '@/lib/utils';
 
-import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
+import { CATEGORY_LABELS } from '@/features/assessments/utils/categories';
 
 const TICKS = [100, 80, 60, 40, 20, 0];
 

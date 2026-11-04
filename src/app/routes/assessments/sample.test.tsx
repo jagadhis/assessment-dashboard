@@ -14,7 +14,7 @@ const comparisonImage = async (label: string) => {
   return within(figure).getByRole('img');
 };
 
-describe('SampleDetailPage', () => {
+describe('SampleRoute', () => {
   it('filters the assessed inputs by the selected category', async () => {
     const { user } = renderRoute('/assessments/product-name/samples/s1');
 

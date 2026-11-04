@@ -1,6 +1,6 @@
 import type { Assessment } from '@/features/assessments/types/schemas';
-import type { Crumb } from '@/components/layout/breadcrumbs';
-import { PageHeader } from '@/components/layout/page-header';
+import type { Crumb } from '@/components/layouts/breadcrumbs';
+import { PageHeader } from '@/components/layouts/page-header';
 
 import { DownloadReportButton } from './download-report-button';
 import { ModalitySelect } from './modality-select';

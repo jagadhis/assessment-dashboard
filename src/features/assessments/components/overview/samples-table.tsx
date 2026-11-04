@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/table';
 import { changeDirection, formatConfidence } from '@/lib/format';
 
-import { CATEGORY_LABELS } from '@/features/assessments/lib/categories';
+import { CATEGORY_LABELS } from '@/features/assessments/utils/categories';
 import { ChangeIndicator } from '@/features/assessments/components/shared/change-indicator';
 import { SampleThumbnail } from './sample-thumbnail';
 import { paths } from '@/config/paths';

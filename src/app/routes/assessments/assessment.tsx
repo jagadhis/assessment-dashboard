@@ -1,18 +1,17 @@
 import { useParams } from 'react-router';
 
 import { PageSkeleton } from '@/components/feedback/page-skeleton';
-
+import { QueryError } from '@/components/feedback/query-error';
+import { useAssessment } from '@/features/assessments/api/get-assessment';
 import { DegradationChart } from '@/features/assessments/components/overview/degradation-chart';
 import { FindingsCard } from '@/features/assessments/components/overview/findings-card';
 import { FindingsDialog } from '@/features/assessments/components/overview/findings-dialog';
 import { KpiRow } from '@/features/assessments/components/overview/kpi-row';
 import { SamplesTable } from '@/features/assessments/components/overview/samples-table';
-import { useFindingsDialog } from '@/features/assessments/hooks/use-findings-dialog';
 import { AssessmentPageHeader } from '@/features/assessments/components/shared/assessment-page-header';
-import { QueryError } from '@/features/assessments/components/shared/query-error';
-import { useAssessment } from '@/features/assessments/api/get-assessment';
+import { useFindingsDialog } from '@/features/assessments/hooks/use-findings-dialog';
 
-export function AssessmentOverviewPage() {
+export function AssessmentRoute() {
   const { assessmentId = '' } = useParams();
   const { data: assessment, error, refetch } = useAssessment(assessmentId);
   const findingsDialog = useFindingsDialog();
