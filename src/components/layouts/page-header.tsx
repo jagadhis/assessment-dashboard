@@ -10,10 +10,10 @@ interface PageHeaderProps {
 
 export function PageHeader({ breadcrumbs, title, actions }: PageHeaderProps) {
   return (
-    <div className="mb-6 flex flex-col gap-3">
+    <div className="mb-section flex flex-col gap-2.5">
       <Breadcrumbs items={breadcrumbs} />
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-2xl sm:text-[1.75rem]">{title}</h1>
+        <h1 className="text-2xl sm:text-page-title">{title}</h1>
         {actions && <div className="flex flex-wrap items-center gap-3">{actions}</div>}
       </div>
     </div>
