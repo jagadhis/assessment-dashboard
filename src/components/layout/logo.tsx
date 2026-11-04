@@ -1,10 +1,11 @@
 import { Box } from 'lucide-react';
 import { Link } from 'react-router';
+import { paths } from '@/config/paths';
 
 export function Logo() {
   return (
     <Link
-      to="/assessments"
+      to={paths.assessments.getHref()}
       className="flex size-10 items-center justify-center rounded-xl text-foreground"
     >
       <Box className="size-7" strokeWidth={2.25} aria-hidden />

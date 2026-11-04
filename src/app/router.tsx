@@ -8,15 +8,16 @@ import {
   NotFoundPage,
   SampleDetailPage,
 } from './lazy-pages';
+import { paths } from '@/config/paths';
 
 export const routes: RouteObject[] = [
   {
     element: <AppShell />,
     children: [
-      { index: true, element: <Navigate to="/assessments" replace /> },
-      { path: 'assessments', element: <AssessmentsPage /> },
-      { path: 'assessments/:assessmentId', element: <AssessmentOverviewPage /> },
-      { path: 'assessments/:assessmentId/samples/:sampleId', element: <SampleDetailPage /> },
+      { index: true, element: <Navigate to={paths.assessments.getHref()} replace /> },
+      { path: paths.assessments.path, element: <AssessmentsPage /> },
+      { path: paths.assessment.path, element: <AssessmentOverviewPage /> },
+      { path: paths.sample.path, element: <SampleDetailPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

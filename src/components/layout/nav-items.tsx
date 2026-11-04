@@ -4,6 +4,7 @@ import { NavLink } from 'react-router';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
+import { paths } from '@/config/paths';
 
 const itemClass =
   'text-muted-foreground hover:bg-muted hover:text-foreground flex size-10 items-center justify-center rounded-xl transition-colors [&_svg]:size-5';
@@ -34,7 +35,7 @@ export function NavItems({ className }: { className?: string }) {
       <li>
         <RailTooltip label="Assessments">
           <NavLink
-            to="/assessments"
+            to={paths.assessments.getHref()}
             className={({ isActive }) =>
               cn(itemClass, isActive && 'bg-brand-50 text-brand-700 hover:bg-brand-50')
             }
